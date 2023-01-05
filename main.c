@@ -4,21 +4,19 @@
 
 int main ()
 {
-	int n, i, j, re;
-	printf ("Enter the size of array: ");
-	scanf ("%d", &n);
-	int a[n];
-	srand(time(NULL));
-	for (i=0; i<n; i++)
+	unsigned short a[10], i, j, re;
+	srand (time(NULL));
+	printf ("Array: \n");
+	for (i=0; i<10; i++)
 	{
 		a[i]=rand()%10;
 		printf ("%2d", a[i]);
 	}
-	printf ("\nNon-epeating elements of array:\n");
-	for (i=0; i<n; i++)
+	printf ("\nNon-repeating elements of array:\n");
+	for (i=0; i<10; i++)
 	{
 		re=1;
-		for (j=0; j<n; j++)
+		for (j=0; j<10; j++)
 		if (a[i]==a[j] && i!=j)
 		{
 			re=0;
